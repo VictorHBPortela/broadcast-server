@@ -8,6 +8,9 @@
     "build": "tsc",
     "dev": "tsc --watch",
     "start": "node dist/index.js",
+    "cli": "node dist/commandParser.js",
+    "start-server": "npm run build && npm run cli start-server",
+    "connect": "npm run build && npm run cli connect",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,10 +27,18 @@
   },
   "homepage": "https://github.com/VictorHBPortela/broadcast-server#readme",
   "devDependencies": {
+    "@types/express": "^5.0.3",
     "@types/node": "^24.3.3",
+    "@types/yargs": "^17.0.33",
     "@typescript-eslint/eslint-plugin": "^8.43.0",
     "@typescript-eslint/parser": "^8.43.0",
     "eslint": "^9.35.0",
     "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "yargs": "^18.0.0"
   }
 }
