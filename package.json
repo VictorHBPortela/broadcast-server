@@ -10,9 +10,7 @@
     "start": "node dist/handler.js",
     "cli": "node dist/commandParser.js",
     "start-server": "npm run build && npm run cli start-server",
-    "start-dev": "npm run build && npm run cli start-server && npm run dev",
     "connect": "npm run build && npm run cli connect",
-    "connect-dev": "npm run build && npm run cli connect && npm run dev",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
