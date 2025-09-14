@@ -1,7 +1,6 @@
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
-import { connectServer } from "./client.js";
-import { startServer } from "./server.js";
+import { connectClient, startServer } from "./handler.js";
 
 yargs(hideBin(process.argv))
   .command(
@@ -21,7 +20,7 @@ yargs(hideBin(process.argv))
       key: { type: "string", requiresArg: false },
     },
     () => {
-      connectServer();
+      connectClient();
     }
   )
   .parseSync();
